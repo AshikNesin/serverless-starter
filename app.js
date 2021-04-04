@@ -1,7 +1,9 @@
-const express = require('express')
-const path = require('path')
-const bodyParser = require('body-parser')
-const cors = require('cors')
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+
 const app = express()
 const router = express.Router()
 
@@ -16,6 +18,4 @@ router.get('/hello', (req, res) => {
 app.use('/', router)
 
 // Export your express server so you can import it in the lambda function.
-// module.exports = app
-
 export default app;
