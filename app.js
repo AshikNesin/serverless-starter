@@ -9,7 +9,7 @@ router.use(cors())
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
 
-router.get('/', (req, res) => {
+router.get('/hello', (req, res) => {
   res.send(`Hello World`)
 })
 
