@@ -1,4 +1,14 @@
 require('source-map-support/register')
-import serverlessExpress from '@vendia/serverless-express';
+
+// exports.handler = function (event, context, callback) {
+//     console.log(`Hello, Cloudwatch!`);
+//     const response = {
+//         statusCode: 200,
+//         body: 'Hello Lambda!',
+//     };
+//     return callback(null, response);
+// };
+
 import app from './app';
-export const handler = serverlessExpress({ app });
+import serverless from 'serverless-http';
+exports.handler = serverless(app);

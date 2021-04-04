@@ -2,10 +2,11 @@
 service: serverless-starter
 
 # Create an optimized package for our functions 
-package:
-  individually: true
+# package:
+#   individually: true
 
 plugins:
+  - serverless-domain-manager
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
@@ -15,9 +16,10 @@ provider:
   runtime: nodejs10.x
   # stage: dev
   stage: prod
-  memorySize: 2048 # recommended
+  # memorySize: 2048 # recommended
   profile: NesinTechnologies
   region: ap-south-1
+  lambdaHashingVersion: 20201221
   # To load environment variables externally
   # rename env.example to .env and uncomment
   # the following line. Also, make sure to not
@@ -30,6 +32,11 @@ custom:
     port: 7777
   bundle:
     linting: false
+  customDomain:
+    domainName: hello.hugethoughts.com
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: false
 functions:
   app:
     handler: lambda.handler 

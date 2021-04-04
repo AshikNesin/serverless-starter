@@ -4,8 +4,8 @@
   "description": "A Node.js starter for Serverless Framework with ES6 and TypeScript support",
   "main": "lambda.js",
   "scripts": {
-    "dev":"serverless offline start",
-    "deploy":"serverless deploy"
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy"
   },
   "author": "Ashik Nesin",
   "license": "MIT",
@@ -15,13 +15,14 @@
   },
   "devDependencies": {
     "serverless-bundle": "3.2.0",
+    "serverless-domain-manager": "^5.1.0",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.12.1"
   },
   "dependencies": {
-    "@vendia/serverless-express": "^4.3.4",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0"
   }
 }
