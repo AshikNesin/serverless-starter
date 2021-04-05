@@ -44,3 +44,4 @@ functions:
       - http:
           method: ANY   
           path: /{proxy+}
+          cors: true
