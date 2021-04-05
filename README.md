@@ -115,3 +115,4 @@ To [override the default config](https://eslint.org/docs/user-guide/configuring)
 
 ## Resources
 - https://www.mongodb.com/blog/post/serverless-development-with-nodejs-aws-lambda-mongodb-atlas
+- https://medium.com/crowdbotics/how-to-build-a-serverless-backend-with-aws-lambda-and-nodejs-e0d1257086b4

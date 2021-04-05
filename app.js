@@ -1,20 +1,22 @@
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
-import cors from 'cors';
+import mongoose from 'mongoose';
+import corsMiddleware from './utils/cors-middleware';
 
-import { connectToDatabase } from './utils/db'
+const User = mongoose.model('User')
 
 const app = express()
 const router = express.Router()
 
-router.use(cors())
+router.use(corsMiddleware)
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
 
 router.get('/hello', (req, res) => {
   res.send(`Hello World`)
 })
+
 
 app.use('/', router)
 
