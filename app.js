@@ -3,6 +3,7 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
+import { connectToDatabase } from './utils/db'
 
 const app = express()
 const router = express.Router()

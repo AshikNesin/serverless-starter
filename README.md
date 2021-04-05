@@ -112,3 +112,6 @@ To [override the default config](https://eslint.org/docs/user-guide/configuring)
 ## Plugins
 - [serverless-bundle](https://github.com/AnomalyInnovations/serverless-bundle)
 - [serverless-offline](https://github.com/dherault/serverless-offline)
+
+## Resources
+- https://www.mongodb.com/blog/post/serverless-development-with-nodejs-aws-lambda-mongodb-atlas
