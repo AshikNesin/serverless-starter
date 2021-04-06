@@ -3,13 +3,15 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import corsMiddleware from './utils/cors-middleware';
+import cookiesMiddleware from './utils/cookies-middleware';
 
 const User = mongoose.model('User')
 
 const app = express()
 const router = express.Router()
 
-router.use(corsMiddleware)
+router.use(corsMiddleware);
+router.use(cookiesMiddleware);
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
 
