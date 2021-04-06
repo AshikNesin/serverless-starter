@@ -12,8 +12,6 @@ import { connectToDatabase } from './utils/db'
 
 import app from './app';
 import serverless from 'serverless-http';
-// exports.handler = serverless(app);
-
 // or as a promise
 const handler = serverless(app);
 exports.handler = async (event, context) => {
