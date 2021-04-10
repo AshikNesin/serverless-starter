@@ -2,11 +2,12 @@
 service: serverless-starter
 
 # Create an optimized package for our functions 
-# package:
+package:
 #   individually: true
+  exclude:
+    - "docs"
 
 plugins:
-  # - serverless-domain-manager
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
@@ -32,12 +33,6 @@ custom:
     port: 7777
   bundle:
     linting: false
-  # customDomain:
-  #   domainName: hello.hugethoughts.com
-  #   basePath: ''
-  #   stage: ${self:provider.stage}
-  #   createRoute53Record: false
-functions:
   app:
     handler: lambda.handler 
     events: 
