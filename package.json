@@ -5,7 +5,8 @@
   "main": "lambda.js",
   "scripts": {
     "dev": "serverless offline start",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "setup:domain":"sls create_domain"
   },
   "author": "Ashik Nesin",
   "license": "MIT",

@@ -32,11 +32,11 @@ custom:
     port: 7777
   bundle:
     linting: false
-  # customDomain:
-  #   domainName: hello.hugethoughts.com
-  #   basePath: ''
-  #   stage: ${self:provider.stage}
-  #   createRoute53Record: false
+  customDomain:
+    domainName: hello.hugethoughts.com
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: false
 functions:
   app:
     handler: lambda.handler 
