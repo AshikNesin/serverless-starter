@@ -1,7 +1,7 @@
 const cookiesMiddleware = (req, res, next) => {
     req.cookies = {};
     const cookieString = req.headers.cookie || '';
-    const rawCookies = req.headers.cookie.split('; ');
+    const rawCookies = cookieString.split('; ');
     if (cookieString && rawCookies.length) {
         rawCookies.map(item => {
             const [key, value] = item.split('=');
